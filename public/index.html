@@ -8,6 +8,73 @@
     <script src="lib/socket.io-1.1.0.js"></script>
 
     <style>
+	body  {
+    margin: 0;
+    background: black;
+}
+
+#grid {
+    margin: 0 auto;
+    width: 1000px;
+    position: relative;
+}
+
+.layer {
+    height: 600px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1000px;
+}
+
+#l1 {
+    z-index: 1;
+}
+
+#l2  {
+    z-index: 2;
+}
+
+#l3 {
+    z-index: 3;
+}
+
+#l4 {
+    z-index: 4;
+}
+
+.row video {
+    width: 200px;
+    height: 200px;
+    background: white;
+    display: block;
+    float: left;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+#l1 video {
+    background: blue;
+}
+
+#l2 video {
+	background: red;
+}
+
+#l3 video {
+    background: green;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#l4 video {
+    background: yellow;
+    width: 100%;
+    height: 100%;
+}
 
     </style>
 </head>
@@ -16,7 +83,7 @@
     <body>
         <div id="grid">
 
-            <div id="l1"> <!-- NOT TRUMP -->
+            <div id="l1" class="layer"> <!-- NOT TRUMP -->
                 <div id="l1r1" class="row">
                     <video id="l1v0">
                       <source src="movie.mp4" type="video/mp4">
@@ -85,7 +152,7 @@
                 </div>
             </div>
 
-            <div id="l2"> <!-- TRUMP -->
+            <div id="l2" class="layer"> <!-- TRUMP -->
                 <div id="l2r1" class="row">
                     <video id="l2v0">
                       <source src="movie.mp4" type="video/mp4">
@@ -154,10 +221,42 @@
                 </div>
             </div>
 
-            <div id="l3"> <!-- WINNING -->
-            </div>
+            <div id="l3" class="layer"> <!-- WINNING -->
+            	<video id="win1">
+				  <source src="movie.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>  
+				<video id="win2">
+				  <source src="movie.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>  
+				<video id="win3">
+				  <source src="movie.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>  
+				<video id="win4">
+				  <source src="movie.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>  
+				<video id="win5">
+				  <source src="movie.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>  
+				<video id="win6">
+				  <source src="movie.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>  
+				<video id="win7">
+				  <source src="movie.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>  
+			</div>
 
-            <div id="l4"> <!-- CALM -->
+            <div id="l4" class="layer"> <!-- CALM -->
+            	<video id="calm">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                </video>  
             </div>
 
         </div>
