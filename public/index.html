@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VIZMUZ</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <script src="lib/socket.io-1.1.0.js"></script>
+
+    <style>
+
+    </style>
+</head>
+
+
+    <body>
+        <div id="grid">
+
+            <div id="l1"> <!-- NOT TRUMP -->
+                <div id="l1r1" class="row">
+                    <video id="l1v0">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l1v1">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l1v2">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l1v3">  
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+                    <video id="l1v4">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>            
+                </div>
+                <div id="l1r2" class="row">
+                    <video id="l1v5">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l1v6">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l1v7">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l1v8">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l1v9">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>            
+                </div>
+                <div id="l1r3" class="row">
+                    <video id="l1v10">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l1v11">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l1v12">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l1v13">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l1v14">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>            
+                </div>
+            </div>
+
+            <div id="l2"> <!-- TRUMP -->
+                <div id="l2r1" class="row">
+                    <video id="l2v0">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l2v1">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l2v2">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l2v3">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l2v4">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>            
+                </div>
+                <div id="l2r2" class="row">
+                    <video id="l2v5">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l2v6">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l2v7">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l2v8">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l2v9">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>            
+                </div>
+                <div id="l2r3" class="row">
+                    <video id="l2v10">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l2v11">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l2v12">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l2v13">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video id="l2v14">
+                      <source src="movie.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>            
+                </div>
+            </div>
+
+            <div id="l3"> <!-- WINNING -->
+            </div>
+
+            <div id="l4"> <!-- CALM -->
+            </div>
+
+        </div>
+    </body>
+
+    <script>
+    var socket = io();
+      socket.on('griddata', function (data) {
+          // CONVERT BINARY
+          // COMPARE TO CURRENT STATE
+          // DECIDE NEW STATES
+      });
+    </script>
+
+</html>

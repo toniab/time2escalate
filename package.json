@@ -1,0 +1,27 @@
+{
+  "name": "time2escalate",
+  "version": "1.0.0",
+  "description": "interactive projection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toniab/time2escalate.git"
+  },
+  "dependencies": {
+    "socket.io": "latest",
+    "express": "latest",
+    "serialport": "latest"
+  },
+  "keywords": [
+    "trump"
+  ],
+  "author": "ET",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toniab/time2escalate/issues"
+  },
+  "homepage": "https://github.com/toniab/time2escalate#readme"
+}
